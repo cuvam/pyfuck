@@ -65,6 +65,12 @@ class Minifier(ast.NodeTransformer):
         node.annotation = None
         return node
 
+    def visit_keyword(self, node):
+        if node.arg and node.arg in self.names:
+            node.arg = self.names[node.arg]
+        self.generic_visit(node)
+        return node
+
     def visit_Import(self, node):
         for alias in node.names:
             self.builtins.add(alias.asname or alias.name)

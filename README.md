@@ -6,7 +6,7 @@ How it works:
 4. Wrap each obfuscated ASCII code in a `chr()` call, using `+` to concatenate them all together
 5. Wrap entire obfuscated ASCII string in `exec()`
 
-The result is a valid Python statement that has the same output as the original source code, and only uses the characters `+*()[]cehrx`.
+The result is a valid Python statement that has the same output as the original source code, and only uses the characters `+*=()[]cehrx`.
 
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
 

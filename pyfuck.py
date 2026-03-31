@@ -47,7 +47,7 @@ class Minifier(ast.NodeTransformer):
     def visit_FunctionDef(self, node):
         node.name = self._short_name(node.name)
         if (node.body and isinstance(node.body[0], ast.Expr)
-                and isinstance(node.body[0].value, (ast.Constant, ast.Str))):
+                and isinstance(node.body[0].value, ast.Constant)):
             node.body = node.body[1:] or [ast.Pass()]
         self.generic_visit(node)
         return node
@@ -55,7 +55,7 @@ class Minifier(ast.NodeTransformer):
     def visit_ClassDef(self, node):
         node.name = self._short_name(node.name)
         if (node.body and isinstance(node.body[0], ast.Expr)
-                and isinstance(node.body[0].value, (ast.Constant, ast.Str))):
+                and isinstance(node.body[0].value, ast.Constant)):
             node.body = node.body[1:] or [ast.Pass()]
         self.generic_visit(node)
         return node
@@ -149,6 +149,15 @@ if __name__ == "__main__":
 
     parts = []
     for ch in minified:
-        parts.append(f"chr({table[ord(ch)]})")
+        parts.append(f"'%c'%({table[ord(ch)]})")
 
-    print("exec(" + "+".join(parts) + ")")
+    chunk_size = 20
+    lines = []
+    for i in range(0, len(parts), chunk_size):
+        chunk = "+".join(parts[i:i + chunk_size])
+        if i == 0:
+            lines.append(f"x={chunk}")
+        else:
+            lines.append(f"x=x+{chunk}")
+    lines.append("exec(x)")
+    print("\n".join(lines))

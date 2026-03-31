@@ -1,14 +1,3 @@
-"""
-Step 1: Minify the source code
-Step 2: Extract ASCII code values from each character in minified source
-Step 3: Using the fact that `[]==[]` = 1 in Python, construct an equation
-        using just 1's and `+`/`*`, then replace 1 with `[]==[]`, for
-        each character
-Step 4: Wrap each obfuscated ASCII code in a `chr()` call, using `+` to
-        concatenate them all together
-Step 5: Wrap entire obfuscated ASCII string in `exec()`
-"""
-
 import ast
 import string
 

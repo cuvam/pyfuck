@@ -3,7 +3,7 @@ How it works:
 1. Minify the source code
 2. Extract ASCII code values from each character in minified source
 3. Using the fact that, in Python, `[]==[]` = `True`, and performing arithmetic on `True` coerces it to `1`, construct an expression using just 1's and `+`/`*` for each ASCII code
-4. Replace `1` with `[]==[]` in each resulting ASCII code expresision
+4. Replace `1` with `[]==[]` in each resulting ASCII code expression
 5. Wrap each obfuscated ASCII code expression in a `chr()` call, using `+` to concatenate them all together into a string
 6. Wrap entire obfuscated ASCII statement string in `exec()` to run the obfuscated statement
 

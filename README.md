@@ -9,3 +9,5 @@ How it works:
 The result is a valid Python statement that has the same output as the original source code, and only uses the characters `+*()[]cehrx`.
 
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
+
+Inspired by JSFuck.

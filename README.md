@@ -10,4 +10,6 @@ The result is a valid Python statement that has the same output as the original 
 
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
 
+I do realize that you could get it down to 10 characters by not replacing every `1` with `[]==[]`, removing `[]=`, and including `1` in the allowed character set. But that would be no fun.
+
 Inspired by JSFuck.

@@ -11,6 +11,6 @@ The result is a valid Python program that has the same output as the original so
   
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
 
-Also check out [pyobf](https://gist.github.com/cuvam/de10e3ab707f19ac2c716eda834581a9), a small gist I wrote that you can import to explore outputs of any source program easily in the Python REPL (without minification).
+Also check out [pyobf](https://gist.github.com/cuvam/de10e3ab707f19ac2c716eda834581a9), a small gist I wrote that you can import to explore outputs of any source program easily (without minification).
  
 Inspired by JSFuck.

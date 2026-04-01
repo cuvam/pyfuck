@@ -11,6 +11,6 @@ The result is a valid Python program that has the same output as the original so
   
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
 
-Also check out [pyobf](https://gist.github.com/cuvam/de10e3ab707f19ac2c716eda834581a9), a small gist I wrote that you can import to explore similar obfuscated outputs of any source program easily (without minification).
+Also check out pyobf.py, which drops the minification step and simply converts the source code as-is. Using `from pyobf import *` in the Python REPL, then the functions `obf_source(source_code)` and `exec_obf(obf_source_code)`, allow for exploration of this repo's fuckifying. 
  
 Inspired by JSFuck.

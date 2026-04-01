@@ -26,7 +26,7 @@ How it works:
  
 The result is a valid Python program that has the same output as the original source code, and only uses 12 distinct characters: `%'()*+=[]cex`.
 
-Also works as an anti-LLM obfuscator; good luck trying to get ChatGPT, Claude, Gemini, etc. to explain what the output of this program does. This is achieved partially by exceeding context window limits, and partially because converting each combination of `[]==[]` and operators *literally requires running Python itself* on each expression.
+Also works as an anti-LLM obfuscator; good luck trying to get ChatGPT, Claude, Gemini, etc. to explain what the output of this program does. This is achieved partially by exceeding context window limits, and partially because converting each combination of `[]==[]` and operators *literally requires running Python itself* on each expression to decode the source text.
   
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
 

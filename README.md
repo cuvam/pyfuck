@@ -7,11 +7,12 @@
 ...
 ... print(fac(10))
 ... """)
->>> len(pf_output)
-11207
+>>> pf_output[:20] + '...' + pf_output[-20:]
+'"%c"%((([]==[])+([]=...[]==[])+([]==[])))))'
 >>> exec_obf(pf_output)
 3628800
->>>
+>>> exec(eval(pf_output), {}) # equivalent to exec_obf(pf_output)
+3628800
 ```
 
 How it works:

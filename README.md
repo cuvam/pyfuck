@@ -1,3 +1,19 @@
+```
+>>> pf_output = obf_source("""
+... def fac(n):
+...     if n < 2:
+...         return 1
+...     return n * fac(n-1)
+...
+... print(fac(10))
+... """)
+>>> len(pf_output)
+11207
+>>> exec_obf(pf_output)
+3628800
+>>>
+```
+
 How it works:
  
 1. Minify the source code

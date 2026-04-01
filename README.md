@@ -11,6 +11,6 @@ The result is a valid Python program that has the same output as the original so
   
 Can be ran on itself to create a PyFuck-written Python to PyFuck transpiler, test with `bootstrap.sh`.
 
-Also check out pyobf.py, which drops the minification step and simply converts the source code as-is. Using `from pyobf import *` in the Python REPL, then the functions `obf_source(source_code)` and `exec_obf(obf_source_code)`, allow for exploration of this repo's fuckifying: `exec_obf(obf_source(source_code))` outputs the exact same as `python -c source_code`.
+Also check out pyobf.py, which drops the minification step and simply converts the source code as-is. Using `from pyobf import *` in the Python REPL, then the functions `obf_source(source_code)` and `exec_obf(obf_source_code)`, allow for exploration of this repo's fuckifying: `exec_obf(obf_source(source_code))` in the REPL outputs the exact same as `python -c source_code` in a shell.
  
 Inspired by JSFuck.
